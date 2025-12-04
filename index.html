@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match | 記憶配對</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="game-container">
+        <header>
+            <h1>Memory Match</h1>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="label">步數</span>
+                    <span class="value" id="moves">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">時間</span>
+                    <span class="value" id="timer">00:00</span>
+                </div>
+                <button id="restart-btn" class="btn-primary">重新開始</button>
+            </div>
+        </header>
+
+        <main class="game-board" id="game-board">
+            <!-- Cards will be generated here by JS -->
+        </main>
+    </div>
+
+    <div id="win-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>🎉 恭喜獲勝! 🎉</h2>
+            <p>你完成了遊戲！</p>
+            <div class="final-stats">
+                <p>總步數: <span id="final-moves">0</span></p>
+                <p>總時間: <span id="final-time">00:00</span></p>
+            </div>
+            <button id="play-again-btn" class="btn-primary">再玩一次</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
